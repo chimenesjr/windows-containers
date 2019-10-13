@@ -1,0 +1,1 @@
+﻿<% Response.Redirect("WebForm1.aspx") %>

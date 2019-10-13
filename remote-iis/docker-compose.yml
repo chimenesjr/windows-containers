@@ -1,0 +1,6 @@
+version: '3'
+services:
+  remote-iis:
+    build:
+        context: .
+        dockerfile: Dockerfile
