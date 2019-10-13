@@ -1,5 +1,4 @@
 docker rm message-queue -f;
-docker rm nerd-dinner -f;
 docker rm nerd-dinner-save-handler -f;
 docker rm nerd-dinner-homepage -f;
 docker rm nerd-dinner-web -f;
