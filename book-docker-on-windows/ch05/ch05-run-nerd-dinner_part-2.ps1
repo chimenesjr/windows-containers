@@ -23,7 +23,6 @@ docker container run -d `
  -e "DinnerApi:Enabled=true" `
  dockeronwindows/ch05-nerd-dinner-web:2e;
 
-docker container run -d `
- --name nerd-dinner-api `
- -l "traefik.frontend.rule=Host:api.nerddinner.local" `
- dockeronwindows/ch05-nerd-dinner-api:2e;
+docker container run -d --name nerd-dinner-api -l "traefik.frontend.rule=Host:api.nerddinner.local" dockeronwindows/ch05-nerd-dinner-api:2e;
+
+# http://172.28.251.17/api/dinners
