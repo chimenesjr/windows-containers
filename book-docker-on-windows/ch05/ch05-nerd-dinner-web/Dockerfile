@@ -25,10 +25,10 @@ HEALTHCHECK --interval=5s `
      else {return 1}; `
     } catch { return 1 }
 
-ENTRYPOINT powershell Start-Process -NoNewWindow -FilePath C:\ServiceMonitor.exe -ArgumentList w3svc; `
-    Invoke-WebRequest http://localhost -UseBasicParsing | Out-Null; `
-    netsh http flush logbuffer | Out-Null; `
-    Get-Content -path 'C:\iislog\W3SVC\u_extend1.log' -Tail 1 -Wait 
+# ENTRYPOINT powershell Start-Process -NoNewWindow -FilePath C:\ServiceMonitor.exe -ArgumentList w3svc; `
+#     Invoke-WebRequest http://localhost -UseBasicParsing | Out-Null; `
+#     netsh http flush logbuffer | Out-Null; `
+#     Get-Content -path 'C:\iislog\W3SVC\u_extend1.log' -Tail 1 -Wait 
 
 EXPOSE 80
 

@@ -12,10 +12,11 @@ ENV A01_KEY A01 value
 ENV A02_KEY="A02 value" `
     A03_KEY="A03 value"
 
-ENTRYPOINT ["powershell"]
-CMD Start-Process -NoNewWindow -FilePath C:\ServiceMonitor.exe -ArgumentList w3svc; `
-    Invoke-WebRequest http://localhost -UseBasicParsing | Out-Null; `
-    netsh http flush logbuffer | Out-Null; `
-    Get-Content -path 'C:\iislog\W3SVC\u_extend1.log' -Tail 1 -Wait 
+# removing until find the problem
+# ENTRYPOINT ["powershell"]
+# CMD Start-Process -NoNewWindow -FilePath C:\ServiceMonitor.exe -ArgumentList w3svc; `
+#     Invoke-WebRequest http://localhost -UseBasicParsing | Out-Null; `
+#     netsh http flush logbuffer | Out-Null; `
+#     Get-Content -path 'C:\iislog\W3SVC\u_extend1.log' -Tail 1 -Wait 
 
 COPY default.aspx C:\inetpub\wwwroot

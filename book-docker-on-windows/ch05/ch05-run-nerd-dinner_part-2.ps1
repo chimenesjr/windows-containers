@@ -17,6 +17,7 @@ docker container run -d `
 docker container run -d `
  --name nerd-dinner-web `
  --env-file api-keys.env `
+ -v c:\temp:c:\temp `
  -l "traefik.frontend.rule=Host:nerddinner.local;PathPrefix:/" `
  -l "traefik.frontend.priority=1" `
  -e "HomePage:Enabled=false" `
